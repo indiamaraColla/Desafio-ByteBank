@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import estilos from './Formulario.module.css';
+import estilos from './Form.module.css';
 
-export default function Formulario({ realizarTransacao }) {
+export default function Form({ realizarTransacao }) {
   const [valor, setValor] = useState({ transacao: '', valor: '' });
 
   function handleChange(e) {

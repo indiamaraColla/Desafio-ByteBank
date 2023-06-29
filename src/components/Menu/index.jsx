@@ -4,9 +4,9 @@ import estilos from './Menu.module.css';
 
 const listaMenu = [
   { link: 'Início', href: '/' },
-  { link: 'Cartões', href: '/cartoes' },
-  { link: 'Serviços', href: '/servicos' },
-  { link: 'Investimentos', href: '/investimentos' },
+  { link: 'Cartões', href: '/cards' },
+  { link: 'Serviços', href: '/services' },
+  { link: 'Investimentos', href: '/investments' },
 ];
 
 export default function Menu({ path }) {

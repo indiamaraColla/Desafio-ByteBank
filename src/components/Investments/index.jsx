@@ -1,9 +1,9 @@
 import React from 'react';
 import Box from './Box';
+import estilos from './Investments.module.css';
 import grafico from './grafico.svg';
-import estilos from './Investimentos.module.css';
 
-export default function Investimentos() {
+export default function Investments() {
   return (
     <section className="container">
       <div className="detalhe__superior" />

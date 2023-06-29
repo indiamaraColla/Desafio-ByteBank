@@ -1,16 +1,16 @@
 import { Outlet, useLocation } from 'react-router-dom';
-import { calculaNovoSaldo } from '../../utils';
-import { salvaTransacao } from '../../services/transacoes';
-import { atualizaSaldo } from '../../services/saldo';
 import useListaTransacoes from '../../hooks/useListaTransacoes';
 import useSaldo from '../../hooks/useSaldo';
+import { atualizaSaldo } from '../../services/saldo';
+import { salvaTransacao } from '../../services/transacoes';
+import { calculaNovoSaldo } from '../../utils';
 import estilos from './App.module.css';
 
-import Cabecalho from '../../componentes/Cabecalho';
-import Extrato from '../../componentes/Extrato';
-import Menu from '../../componentes/Menu';
-import Principal from '../../componentes/Principal';
-import Transacao from '../../componentes/Transacao';
+import CardBalance from '../../components/CardBalance';
+import Extract from '../../components/Extract';
+import Header from '../../components/Header';
+import Menu from '../../components/Menu';
+import Transactions from '../../components/Transactions';
 
 export default function App() {
   const [saldo, setSaldo] = useSaldo();
@@ -27,17 +27,17 @@ export default function App() {
 
   return (
     <>
-      <Cabecalho />
+      <Header />
       <main className={estilos.caixa}>
         <Menu path={location.pathname} />
         <div className={estilos.envelope}>
-          <Principal saldo={saldo} />
+          <CardBalance saldo={saldo} />
           {location.pathname === '/' && (
-            <Transacao realizarTransacao={realizarTransacao} />
+            <Transactions realizarTransacao={realizarTransacao} />
           )}
           <Outlet />
         </div>
-        <Extrato transacoes={transacoes} />
+        <Extract transacoes={transacoes} />
       </main>
     </>
   );

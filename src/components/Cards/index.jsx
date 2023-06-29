@@ -1,9 +1,9 @@
 import React from 'react';
-import estilos from './Cartoes.module.css';
-import cartaoFisico from './fisico.svg';
+import estilos from './Cards.module.css';
 import cartaoDigital from './digital.svg';
+import cartaoFisico from './fisico.svg';
 
-export default function Cartoes() {
+export default function Cards() {
   return (
     <section className="container">
       <div className="detalhe__superior" />

@@ -1,13 +1,13 @@
 import React from 'react';
-import estilos from './Saldo.module.css';
-import { ReactComponent as Icone } from './icone-olho.svg';
+import estilos from './Balance.module.css';
+import { ReactComponent as Icon } from './icone-olho.svg';
 
-export default function Saldo({ saldo }) {
+export default function Balance({ saldo }) {
   return (
     <div className={estilos.container}>
       <div className={estilos.wrapper}>
         <h2 className={estilos.saldo}>Saldo</h2>
-        <Icone />
+        <Icon />
       </div>
       <div className={estilos.divisor} />
       <p className={estilos.conta}>Conta corrente</p>
