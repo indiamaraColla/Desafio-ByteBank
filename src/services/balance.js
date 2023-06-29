@@ -1,6 +1,6 @@
 import api from './api';
 
-export async function buscaSaldo() {
+export async function searchBalance() {
   try {
     const resp = await api.get('/saldo');
     return resp.data.valor;
@@ -9,7 +9,7 @@ export async function buscaSaldo() {
   }
 }
 
-export async function atualizaSaldo(novoSaldo) {
+export async function updateBalance(novoSaldo) {
   api
     .put('/saldo', { valor: novoSaldo })
     .then((resp) => console.log(resp.status))

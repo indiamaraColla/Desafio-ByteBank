@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
-import { buscaTransacoes } from '../services/transacoes';
+import { searchTransactions } from '../services/transactions';
 
 export default function useListTransactions() {
   const [transacoes, setTransacoes] = useState([]);
 
   async function listaTransacoes() {
-    const transacoes = await buscaTransacoes();
+    const transacoes = await searchTransactions();
     setTransacoes(transacoes);
   }
 

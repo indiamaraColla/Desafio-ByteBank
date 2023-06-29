@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
-import { buscaSaldo } from '../services/saldo';
+import { searchBalance } from '../services/balance';
 
 export default function useBalance() {
   const [saldo, setSaldo] = useState(0);
 
   async function obtemSaldo() {
-    setSaldo(await buscaSaldo());
+    setSaldo(await searchBalance());
   }
 
   useEffect(() => {

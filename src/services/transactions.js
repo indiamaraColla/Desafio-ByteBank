@@ -1,6 +1,6 @@
 import api from './api';
 
-export async function buscaTransacoes() {
+export async function searchTransactions() {
   try {
     const resp = await api.get('/transacoes');
     return resp.data;
@@ -9,7 +9,7 @@ export async function buscaTransacoes() {
   }
 }
 
-export async function salvaTransacao(novaTransacao) {
+export async function saveTransaction(novaTransacao) {
   try {
     const resp = await api.post('/transacoes', novaTransacao);
     return resp.status;

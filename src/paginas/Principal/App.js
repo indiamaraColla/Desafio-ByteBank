@@ -1,8 +1,8 @@
 import { Outlet, useLocation } from 'react-router-dom';
 import useBalance from '../../hooks/useBalance';
 import useListTransactions from '../../hooks/useListTransactions';
-import { atualizaSaldo } from '../../services/saldo';
-import { salvaTransacao } from '../../services/transacoes';
+import { updateBalance } from '../../services/balance';
+import { saveTransaction } from '../../services/transactions';
 import { calculaNovoSaldo } from '../../utils';
 import estilos from './App.module.css';
 
@@ -20,9 +20,9 @@ export default function App() {
   function realizarTransacao(valores) {
     const novoSaldo = calculaNovoSaldo(valores, saldo);
     setSaldo(novoSaldo);
-    atualizaSaldo(novoSaldo);
+    updateBalance(novoSaldo);
     setTransacoes([...transacoes, valores]);
-    salvaTransacao(valores);
+    saveTransaction(valores);
   }
 
   return (
