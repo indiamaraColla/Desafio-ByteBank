@@ -1,10 +1,10 @@
 import React from 'react';
 
-export default function Icon({ icone, estilos }) {
+export default function Icon({ icon, styles }) {
   return (
-    <div className={estilos.servicos}>
-      <img src={icone.imagem} alt={icone.servico} />
-      <h5>{icone.servico}</h5>
+    <div className={styles.servicos}>
+      <img src={icon.imagem} alt={icon.servico} />
+      <h5>{icon.servico}</h5>
     </div>
   );
 }

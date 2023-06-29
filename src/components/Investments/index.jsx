@@ -1,27 +1,27 @@
 import React from 'react';
 import Box from './Box';
-import estilos from './Investments.module.css';
+import styles from './Investments.module.css';
 import grafico from './grafico.svg';
 
 export default function Investments() {
   return (
     <section className="container">
       <div className="detalhe__superior" />
-      <div className={estilos.wrapper}>
-        <div className={estilos.investimentos}>
+      <div className={styles.wrapper}>
+        <div className={styles.investimentos}>
           <h2>Investimentos</h2>
           <p>Total: R$ 1.000.000,00</p>
         </div>
-        <div className={estilos.aplicacoes}>
-          <Box renda="Renda Fixa" estilos={estilos.renda}>
+        <div className={styles.aplicacoes}>
+          <Box renda="Renda Fixa" styles={styles.renda}>
             R$ 300.000,00
           </Box>
-          <Box renda="Renda variável" estilos={estilos.renda}>
+          <Box renda="Renda variável" styles={styles.renda}>
             R$ 700.000,00
           </Box>
         </div>
         <h3>Estatísticas</h3>
-        <div className={estilos.grafico}>
+        <div className={styles.grafico}>
           <img src={grafico} alt="Gráfico dos investimentos" />
         </div>
       </div>

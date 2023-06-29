@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import estilos from './Menu.module.css';
+import styles from './Menu.module.css';
 
 const listaMenu = [
   { link: 'Início', href: '/' },
@@ -11,20 +11,20 @@ const listaMenu = [
 
 export default function Menu({ path }) {
   return (
-    <nav className={estilos.menu}>
+    <nav className={styles.menu}>
       {listaMenu.map((item, indice) => {
         return (
-          <div key={item.href} className={estilos.item}>
+          <div key={item.href} className={styles.item}>
             <Link
               to={item.href}
-              className={`${estilos.link} ${
-                path === item.href && estilos.linkAtivo
+              className={`${styles.link} ${
+                path === item.href && styles.linkAtivo
               }`}
             >
               {item.link}
             </Link>
             {indice !== listaMenu.length - 1 && (
-              <div className={estilos.divisor} />
+              <div className={styles.divisor} />
             )}
           </div>
         );

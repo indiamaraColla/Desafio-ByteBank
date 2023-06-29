@@ -2,14 +2,14 @@ import { render, screen } from '@testing-library/react';
 import Extract from './index';
 
 test('Deve renderizar uma lista de transações', () => {
-  const transacoes = [
+  const listTransations = [
     {
       transacao: 'Depósito',
       valor: 100,
     },
   ];
 
-  render(<Extract transacoes={transacoes} />);
+  render(<Extract listTransations={listTransations} />);
   const lista = screen.getByRole('listitem');
   expect(lista).toBeInTheDocument();
 });

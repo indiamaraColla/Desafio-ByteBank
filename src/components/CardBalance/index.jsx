@@ -1,6 +1,6 @@
 import React from 'react';
 import Balance from './Balance';
-import estilos from './CardBalance.module.css';
+import styles from './CardBalance.module.css';
 import { ReactComponent as Ilustracao } from './ilustracao.svg';
 
 const data = Date.now();
@@ -15,19 +15,19 @@ const diasDaSemana = [
   'Sábado',
 ];
 
-export default function CardBalance({ saldo }) {
+export default function CardBalance({ balance }) {
   return (
-    <section className={estilos.container}>
-      <div className={estilos.detalhe__superior} />
-      <h1 className={estilos.titulo}>Olá, Joana :)!</h1>
-      <p data-testid="data-atual" className={estilos.data}>{`${
+    <section className={styles.container}>
+      <div className={styles.detalhe__superior} />
+      <h1 className={styles.titulo}>Olá, Joana :)!</h1>
+      <p data-testid="data-atual" className={styles.data}>{`${
         diasDaSemana[hoje.getDay()]
       }, ${hoje.toLocaleDateString('pt-BR')}`}</p>
-      <div className={estilos.wrapper}>
-        <Ilustracao className={estilos.ilustracao} width="250" height="225" />
-        <Balance saldo={saldo} />
+      <div className={styles.wrapper}>
+        <Ilustracao className={styles.ilustracao} width="250" height="225" />
+        <Balance balance={balance} />
       </div>
-      <div className={estilos.detalhe__inferior} />
+      <div className={styles.detalhe__inferior} />
     </section>
   );
 }

@@ -2,15 +2,15 @@ import { useEffect, useState } from 'react';
 import { searchBalance } from '../services/balance';
 
 export default function useBalance() {
-  const [saldo, setSaldo] = useState(0);
+  const [balance, setBalance] = useState(0);
 
-  async function obtemSaldo() {
-    setSaldo(await searchBalance());
+  async function getBalance() {
+    setBalance(await searchBalance());
   }
 
   useEffect(() => {
-    obtemSaldo();
-  }, [saldo]);
+    getBalance();
+  }, [balance]);
 
-  return [saldo, setSaldo];
+  return [balance, setBalance];
 }

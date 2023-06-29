@@ -1,35 +1,35 @@
 import React, { useState } from 'react';
-import estilos from './Form.module.css';
+import styles from './Form.module.css';
 
-export default function Form({ realizarTransacao }) {
-  const [valor, setValor] = useState({ transacao: '', valor: '' });
+export default function Form({ performTransaction }) {
+  const [formValues, setFormValues] = useState({ transacao: '', valor: '' });
 
   function handleChange(e) {
     const { name, value } = e.target;
-    const valoresAtualizados = { ...valor, [name]: value };
-    setValor(valoresAtualizados);
+    const updatedvalues = { ...formValues, [name]: value };
+    setFormValues(updatedvalues);
   }
 
   function handleSubmit(e) {
     e.preventDefault();
-    const dataTransacao = new Date().toLocaleDateString('pt-br');
-    const mesTransacao = new Date().toLocaleDateString('pt-br', {
+    const dataTransaction = new Date().toLocaleDateString('pt-br');
+    const monthTransaction = new Date().toLocaleDateString('pt-br', {
       month: 'long',
     });
-    realizarTransacao({
-      ...valor,
-      data: dataTransacao,
-      mes: mesTransacao[0].toUpperCase() + mesTransacao.substring(1),
+    performTransaction({
+      ...formValues,
+      data: dataTransaction,
+      mes: monthTransaction[0].toUpperCase() + monthTransaction.substring(1),
     });
-    setValor({ ...valor, valor: '' });
+    setFormValues({ ...formValues, valor: '' });
   }
 
   return (
-    <form className={estilos.formulario} onSubmit={handleSubmit}>
+    <form className={styles.formulario} onSubmit={handleSubmit}>
       <div>
-        <h3 className={estilos.legenda__opcoes}>Nova Transação</h3>
+        <h3 className={styles.legenda__opcoes}>Nova Transação</h3>
         <select
-          className={estilos.grupo__opcoes}
+          className={styles.grupo__opcoes}
           onChange={handleChange}
           name="transacao"
           data-testid="select-opcoes"
@@ -41,20 +41,20 @@ export default function Form({ realizarTransacao }) {
           <option value="Transferência">Transferência</option>
         </select>
       </div>
-      <div className={estilos.areaValor}>
-        <label htmlFor="valor" className={estilos.legenda}>
+      <div className={styles.areaValor}>
+        <label htmlFor="valor" className={styles.legenda}>
           Valor
         </label>
         <input
           onChange={handleChange}
-          className={estilos.campo__valor}
+          className={styles.campo__valor}
           type="number"
-          value={valor.valor}
+          value={formValues.valor}
           name="valor"
           id="valor"
           placeholder="Digite um valor"
         />
-        <button className={estilos.botao} type="submit">
+        <button className={styles.botao} type="submit">
           Realizar transação
         </button>
       </div>

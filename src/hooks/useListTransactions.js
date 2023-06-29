@@ -2,16 +2,16 @@ import { useEffect, useState } from 'react';
 import { searchTransactions } from '../services/transactions';
 
 export default function useListTransactions() {
-  const [transacoes, setTransacoes] = useState([]);
+  const [transactions, setTransactions] = useState([]);
 
-  async function listaTransacoes() {
-    const transacoes = await searchTransactions();
-    setTransacoes(transacoes);
+  async function listTransactions() {
+    const transactions = await searchTransactions();
+    setTransactions(transactions);
   }
 
   useEffect(() => {
-    listaTransacoes();
+    listTransactions();
   }, []);
 
-  return [transacoes, setTransacoes];
+  return [transactions, setTransactions];
 }
