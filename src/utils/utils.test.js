@@ -1,4 +1,4 @@
-import { calculaNovoSaldo } from './index';
+import { calculateNewBalance } from './index';
 
 describe('Quando eu realizo uma transação', () => {
   it('Que é um depósito, o saldo deve aumentar', () => {
@@ -7,7 +7,7 @@ describe('Quando eu realizo uma transação', () => {
       valor: 50,
     };
 
-    const novoSaldo = calculaNovoSaldo(transacao, 100);
+    const novoSaldo = calculateNewBalance(transacao, 100);
 
     expect(novoSaldo).toBe(150);
   });
@@ -18,7 +18,7 @@ describe('Quando eu realizo uma transação', () => {
       valor: 50,
     };
 
-    const novoSaldo = calculaNovoSaldo(transacao, 100);
+    const novoSaldo = calculateNewBalance(transacao, 100);
 
     expect(novoSaldo).toBe(50);
   });

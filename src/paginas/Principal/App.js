@@ -3,7 +3,7 @@ import useBalance from '../../hooks/useBalance';
 import useListTransactions from '../../hooks/useListTransactions';
 import { updateBalance } from '../../services/balance';
 import { saveTransaction } from '../../services/transactions';
-import { calculaNovoSaldo } from '../../utils';
+import { calculateNewBalance } from '../../utils';
 import estilos from './App.module.css';
 
 import CardBalance from '../../components/CardBalance';
@@ -18,7 +18,7 @@ export default function App() {
   const location = useLocation();
 
   function realizarTransacao(valores) {
-    const novoSaldo = calculaNovoSaldo(valores, saldo);
+    const novoSaldo = calculateNewBalance(valores, saldo);
     setSaldo(novoSaldo);
     updateBalance(novoSaldo);
     setTransacoes([...transacoes, valores]);

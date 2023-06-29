@@ -10,8 +10,8 @@ export default function AppRoutes() {
     <Routes>
       <Route path="/" element={<App />}>
         <Route path="cards" element={<Cards />} />
-        <Route path="investimentos" element={<Investments />} />
-        <Route path="servicos" element={<Services />} />
+        <Route path="investments" element={<Investments />} />
+        <Route path="services" element={<Services />} />
       </Route>
       <Route path="*" element={<Pagina404 />} />
     </Routes>
