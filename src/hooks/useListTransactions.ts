@@ -1,7 +1,17 @@
 import { useEffect, useState } from 'react';
 import { searchTransactions } from '../services/transactions';
 
-export default function useListTransactions() {
+type Transaction = {
+  data: string;
+  mes: string;
+  transacao: string;
+  valor: number;
+};
+
+type SetTransactions = React.Dispatch<React.SetStateAction<never[]>>;
+type UseListTransactionsResult = [Transaction[], SetTransactions];
+
+export default function useListTransactions(): UseListTransactionsResult {
   const [transactions, setTransactions] = useState([]);
 
   async function listTransactions() {
