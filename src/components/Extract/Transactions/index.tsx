@@ -1,4 +1,19 @@
-export default function Transactions({ item, styles }) {
+interface TransactionsProps {
+  item: {
+    mes: string;
+    transacao: string;
+    data: string;
+    valor: string;
+  };
+  styles: {
+    mes: string;
+    transacao: string;
+    valor: string;
+    divisor: string;
+  };
+}
+
+export default function Transactions({ item, styles }: TransactionsProps) {
   return (
     <li>
       <p className={styles.mes}>{item.mes}</p>

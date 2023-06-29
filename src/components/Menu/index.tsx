@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Menu.module.css';
 
@@ -9,7 +8,11 @@ const listaMenu = [
   { link: 'Investimentos', href: '/investments' },
 ];
 
-export default function Menu({ path }) {
+interface MenuProps {
+  path: string;
+}
+
+export default function Menu({ path }: MenuProps) {
   return (
     <nav className={styles.menu}>
       {listaMenu.map((item, indice) => {

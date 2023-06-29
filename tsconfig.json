@@ -9,19 +9,22 @@
     "resolveJsonModule": true,
     "baseUrl": "./src",
     "paths": {
-      "~/*": ["*"]
+      "~components/*": ["./components/*"],
+      "~pages/*": ["./pages/*"],
+      "~hooks/*": ["./hooks/*"],
+      "~utils/*": ["./utils/*"]
     },
-    "typeRoots": ["./node_modules/@types", "./src/types"],
-    "allowJs": true,
-    "noEmit": true
+    "typeRoots": ["./node_modules/@types"],
+    "allowJs": true
   },
   "include": [
+    "src",
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.js",
     "src/**/*.jsx",
-    "src/**/*.svg",
-    "src/**/*.png"
+    "src/**/*.test.js",
+    "src/types/custom.d.ts"
   ],
   "exclude": ["node_modules", "build", "scripts"]
 }

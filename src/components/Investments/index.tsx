@@ -1,8 +1,6 @@
-import React from 'react';
 import Box from './Box';
 import styles from './Investments.module.css';
 import grafico from './grafico.svg';
-
 export default function Investments() {
   return (
     <section className="container">

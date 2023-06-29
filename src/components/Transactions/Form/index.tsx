@@ -1,16 +1,26 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styles from './Form.module.css';
 
-export default function Form({ performTransaction }) {
+interface FormProps {
+  performTransaction: (transaction: { data: string; mes: string }) => void;
+}
+
+export default function Form({ performTransaction }: FormProps) {
   const [formValues, setFormValues] = useState({ transacao: '', valor: '' });
 
-  function handleChange(e) {
+  function handleChangeInput(e: React.ChangeEvent<HTMLInputElement>) {
     const { name, value } = e.target;
     const updatedvalues = { ...formValues, [name]: value };
     setFormValues(updatedvalues);
   }
 
-  function handleSubmit(e) {
+  function handleChangeSelect(e: React.ChangeEvent<HTMLSelectElement>) {
+    const { name, value } = e.target;
+    const updatedvalues = { ...formValues, [name]: value };
+    setFormValues(updatedvalues);
+  }
+
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const dataTransaction = new Date().toLocaleDateString('pt-br');
     const monthTransaction = new Date().toLocaleDateString('pt-br', {
@@ -30,7 +40,7 @@ export default function Form({ performTransaction }) {
         <h3 className={styles.legenda__opcoes}>Nova Transação</h3>
         <select
           className={styles.grupo__opcoes}
-          onChange={handleChange}
+          onChange={handleChangeSelect}
           name="transacao"
           data-testid="select-opcoes"
         >
@@ -46,7 +56,7 @@ export default function Form({ performTransaction }) {
           Valor
         </label>
         <input
-          onChange={handleChange}
+          onChange={handleChangeInput}
           className={styles.campo__valor}
           type="number"
           value={formValues.valor}

@@ -1,8 +1,11 @@
-import React from 'react';
 import styles from './Balance.module.css';
 import { ReactComponent as Icon } from './icone-olho.svg';
 
-export default function Balance({ balance }) {
+interface BalanceProps {
+  balance: number;
+}
+
+export default function Balance({ balance }: BalanceProps) {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>

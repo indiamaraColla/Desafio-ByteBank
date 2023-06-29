@@ -1,9 +1,14 @@
-import React from 'react';
 import Form from './Form';
 import styles from './Transactions.module.css';
 import { ReactComponent as Ilustracao } from './ilustracao.svg';
 
-export default function Transactions({ performTransaction }) {
+interface TransactionsProps {
+  performTransaction: () => void;
+}
+
+export default function Transactions({
+  performTransaction,
+}: TransactionsProps) {
   return (
     <section className="container">
       <div className="detalhe__superior" />

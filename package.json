@@ -17,7 +17,7 @@
     "test:coverage": "npm run test -- --coverage --watchAll=false",
     "api": "json-server --watch db.json --port 8080",
     "format": "prettier --write \"src/**/*{.ts,.tsx}\"",
-    "lint": "eslint \"src/**/*{.ts,.tsx}\" --quiet",
+    "lint": "eslint . --ext .ts,.tsx",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -42,9 +42,11 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "@types/css-modules": "^1.0.2",
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",
-    "@types/css-modules": "^1.0.2",
+    "@typescript-eslint/eslint-plugin": "^5.60.1",
+    "@typescript-eslint/parser": "^5.60.1",
     "eslint": "^8.43.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.27.5",

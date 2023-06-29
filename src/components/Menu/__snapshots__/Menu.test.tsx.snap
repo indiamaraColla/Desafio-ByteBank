@@ -3,7 +3,7 @@
 exports[`Deve renderizar os links com a classe link 1`] = `
 Array [
   <a
-    class="link false"
+    class="link linkAtivo"
     href="/"
   >
     Início
