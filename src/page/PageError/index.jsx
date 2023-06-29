@@ -1,9 +1,9 @@
 import React from 'react';
-import estilos from './Pagina404.module.css';
-import espaco from './404.svg';
 import { Link } from 'react-router-dom';
+import espaco from './404.svg';
+import estilos from './PageError.module.css';
 
-export default function Pagina404() {
+export default function PageError() {
   return (
     <div data-testid="pagina-404" className={estilos.container}>
       <h1>Ops! Não encontramos a página</h1>

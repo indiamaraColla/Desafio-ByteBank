@@ -4,7 +4,7 @@ import useListTransactions from '../../hooks/useListTransactions';
 import { updateBalance } from '../../services/balance';
 import { saveTransaction } from '../../services/transactions';
 import { calculateNewBalance } from '../../utils';
-import estilos from './App.module.css';
+import estilos from './Home.module.css';
 
 import CardBalance from '../../components/CardBalance';
 import Extract from '../../components/Extract';
@@ -12,7 +12,7 @@ import Header from '../../components/Header';
 import Menu from '../../components/Menu';
 import Transactions from '../../components/Transactions';
 
-export default function App() {
+export default function Home() {
   const [saldo, setSaldo] = useBalance();
   const [transacoes, setTransacoes] = useListTransactions();
   const location = useLocation();
