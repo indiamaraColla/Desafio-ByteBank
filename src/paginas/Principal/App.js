@@ -1,6 +1,6 @@
 import { Outlet, useLocation } from 'react-router-dom';
-import useListaTransacoes from '../../hooks/useListaTransacoes';
-import useSaldo from '../../hooks/useSaldo';
+import useBalance from '../../hooks/useBalance';
+import useListTransactions from '../../hooks/useListTransactions';
 import { atualizaSaldo } from '../../services/saldo';
 import { salvaTransacao } from '../../services/transacoes';
 import { calculaNovoSaldo } from '../../utils';
@@ -13,8 +13,8 @@ import Menu from '../../components/Menu';
 import Transactions from '../../components/Transactions';
 
 export default function App() {
-  const [saldo, setSaldo] = useSaldo();
-  const [transacoes, setTransacoes] = useListaTransacoes();
+  const [saldo, setSaldo] = useBalance();
+  const [transacoes, setTransacoes] = useListTransactions();
   const location = useLocation();
 
   function realizarTransacao(valores) {
