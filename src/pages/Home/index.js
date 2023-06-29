@@ -1,7 +1,7 @@
 import { Outlet, useLocation } from 'react-router-dom';
 import CardBalance from '../../components/CardBalance';
 import Extract from '../../components/Extract';
-import Header from '../../components/Header';
+import Header from '../../components/Header/index.tsx';
 import Menu from '../../components/Menu';
 import Transactions from '../../components/Transactions';
 import useBalance from '../../hooks/useBalance';

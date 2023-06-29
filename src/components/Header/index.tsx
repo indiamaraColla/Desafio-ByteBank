@@ -1,9 +1,8 @@
-import React from 'react';
 import avatarUsuario from '../../assets/avatar.svg';
 import { ReactComponent as Logo } from '../../assets/bytebank.svg';
 import styles from './Header.module.css';
 
-export default function Header() {
+const Header = () => {
   return (
     <header className={styles.cabecalho}>
       <div className={styles.container}>
@@ -15,4 +14,6 @@ export default function Header() {
       </div>
     </header>
   );
-}
+};
+
+export default Header;

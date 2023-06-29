@@ -2,8 +2,8 @@ import { Route, Routes } from 'react-router-dom';
 import Cards from './components/Cards';
 import Investments from './components/Investments';
 import Services from './components/Services';
-import Home from './page/Home';
-import PageError from './page/PageError';
+import Home from './pages/Home';
+import PageError from './pages/PageError';
 
 export default function AppRoutes() {
   return (

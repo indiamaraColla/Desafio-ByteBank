@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './Extract.module.css';
 import Transactions from './Transactions';
 

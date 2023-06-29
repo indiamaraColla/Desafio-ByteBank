@@ -16,8 +16,8 @@
     "test": "react-scripts test --transformIgnorePatterns \"node_modules/(?!axios)/\"",
     "test:coverage": "npm run test -- --coverage --watchAll=false",
     "api": "json-server --watch db.json --port 8080",
-    "format": "prettier --write \"src/**/*{.js,.jsx}\"",
-    "lint": "eslint \"src/**/*{.js,.jsx}\" --quiet",
+    "format": "prettier --write \"src/**/*{.ts,.tsx}\"",
+    "lint": "eslint \"src/**/*{.ts,.tsx}\" --quiet",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -42,12 +42,16 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "eslint": "^8.26.0",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "@types/css-modules": "^1.0.2",
+    "eslint": "^8.43.0",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsx-a11y": "^6.6.1",
-    "eslint-plugin-react": "^7.31.10",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "typescript": "^5.1.6"
   }
 }

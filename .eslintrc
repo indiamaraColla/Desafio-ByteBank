@@ -20,13 +20,14 @@
     "react/react-in-jsx-scope": "off",
     "react/self-closing-comp": "warn",
     "no-unused-vars": "off",
-    "import/no-unresolved": "off"
+    "import/no-unresolved": [
+      "error",
+      {
+        "ignore": ["**/*.svg"]
+      }
+    ]
   },
-  "plugins": [
-    "react",
-    "import",
-    "jsx-a11y"
-  ],
+  "plugins": ["react", "import", "jsx-a11y"],
   "env": {
     "es6": true,
     "browser": true,
