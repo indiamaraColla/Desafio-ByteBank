@@ -9,7 +9,7 @@ export async function searchTransactions() {
   }
 }
 
-export async function saveTransaction(novaTransacao) {
+export async function saveTransaction(novaTransacao: string) {
   try {
     const resp = await api.post('/transacoes', novaTransacao);
     return resp.status;

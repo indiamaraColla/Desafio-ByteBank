@@ -9,7 +9,7 @@ export async function searchBalance() {
   }
 }
 
-export async function updateBalance(novoSaldo) {
+export async function updateBalance(novoSaldo: string) {
   api
     .put('/saldo', { valor: novoSaldo })
     .then((resp) => console.log(resp.status))
