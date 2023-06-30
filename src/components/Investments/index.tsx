@@ -8,7 +8,7 @@ export default function Investments() {
   const variableIcomeValue = '700.000,00';
 
   return (
-    <section className="container">
+    <section className="container" data-testid="investments">
       <div className="detalhe__superior" />
       <div className={styles.wrapper}>
         <div className={styles.investimentos}>

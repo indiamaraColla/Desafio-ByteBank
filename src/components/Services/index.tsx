@@ -4,7 +4,7 @@ import icon from './icon.json';
 
 const Services = () => {
   return (
-    <section className="container">
+    <section className="container" data-testid="services">
       <div className={styles.detalhe__superior} />
       <div className={styles.wrapper}>
         {icon.map((icone) => {

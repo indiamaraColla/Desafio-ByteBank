@@ -10,8 +10,10 @@ export async function searchBalance() {
 }
 
 export async function updateBalance(payload: number) {
-  api
-    .put('/saldo', { valor: payload })
-    .then((resp) => console.log(resp.status))
-    .catch((err) => console.log(err));
+  try {
+    const resp = await api.put('/saldo', { valor: payload });
+    return resp;
+  } catch (err) {
+    return 'Erro na requisição';
+  }
 }

@@ -36,6 +36,7 @@ export default function Home() {
             <Transactions performTransaction={performTransaction} />
           )}
           <Outlet />
+          <noscript data-testid="local">{location.pathname}</noscript>
         </div>
         <Extract listTransations={transactions} />
       </main>
