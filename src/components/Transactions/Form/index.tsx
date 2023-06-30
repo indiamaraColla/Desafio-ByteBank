@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { TransactionsProps } from 'types/Interface/Transations';
+import { TransactionsProps } from 'types/Interface/Transactions';
 import styles from './Form.module.css';
 
 interface FormProps {
@@ -64,6 +64,7 @@ export default function Form({ performTransaction }: FormProps) {
           name="valor"
           id="valor"
           placeholder="Digite um valor"
+          data-testid="form-input"
         />
         <button className={styles.botao} type="submit">
           Realizar transação

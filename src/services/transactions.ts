@@ -1,4 +1,4 @@
-import { TransactionsProps } from 'types/Interface/Transations';
+import { TransactionsProps } from 'types/Interface/Transactions';
 import api from './api';
 
 export async function searchTransactions() {

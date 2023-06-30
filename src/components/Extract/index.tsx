@@ -1,4 +1,4 @@
-import { TransactionsProps } from 'types/Interface/Transations';
+import { TransactionsProps } from 'types/Interface/Transactions';
 import styles from './Extract.module.css';
 import Transactions from './Transactions';
 

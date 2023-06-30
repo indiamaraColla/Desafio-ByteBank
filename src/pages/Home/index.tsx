@@ -1,5 +1,5 @@
 import { Outlet, useLocation } from 'react-router-dom';
-import { TransactionsProps } from 'types/Interface/Transations';
+import { TransactionsProps } from 'types/Interface/Transactions';
 import CardBalance from '../../components/CardBalance';
 import Extract from '../../components/Extract';
 import Header from '../../components/Header';

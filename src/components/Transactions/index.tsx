@@ -1,4 +1,4 @@
-import { TransactionsProps } from 'types/Interface/Transations';
+import { TransactionsProps } from 'types/Interface/Transactions';
 import Form from './Form';
 import styles from './Transactions.module.css';
 import { ReactComponent as Ilustracao } from './ilustracao.svg';

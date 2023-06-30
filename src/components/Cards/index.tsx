@@ -12,8 +12,18 @@ export default function Cards() {
         <div className={styles.cartao}>
           <img src={cartaoFisico} alt="Cartão físico" />
           <div className={styles.funcoes}>
-            <button className={styles.botaoConfigurar}>Configurar</button>
-            <button className={styles.botaoBloquear}>Bloquear</button>
+            <button
+              className={styles.botaoConfigurar}
+              data-testid="card-physical-config"
+            >
+              Configurar
+            </button>
+            <button
+              className={styles.botaoBloquear}
+              data-testid="card-physical-block"
+            >
+              Bloquear
+            </button>
             <span>Função: Débito/Crédito</span>
           </div>
         </div>
@@ -21,8 +31,18 @@ export default function Cards() {
         <div className={styles.cartao}>
           <img src={cartaoDigital} alt="Cartão digital" />
           <div className={styles.funcoes}>
-            <button className={styles.botaoConfigurar}>Configurar</button>
-            <button className={styles.botaoBloquear}>Bloquear</button>
+            <button
+              className={styles.botaoConfigurar}
+              data-testid="card-digital-config"
+            >
+              Configurar
+            </button>
+            <button
+              className={styles.botaoBloquear}
+              data-testid="card-digital-block"
+            >
+              Bloquear
+            </button>
             <span>Função: Débito</span>
           </div>
         </div>
