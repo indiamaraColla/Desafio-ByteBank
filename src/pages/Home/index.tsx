@@ -1,7 +1,8 @@
 import { Outlet, useLocation } from 'react-router-dom';
+import { TransactionsProps } from 'types/Interface/Transations';
 import CardBalance from '../../components/CardBalance';
 import Extract from '../../components/Extract';
-import Header from '../../components/Header/index.tsx';
+import Header from '../../components/Header';
 import Menu from '../../components/Menu';
 import Transactions from '../../components/Transactions';
 import useBalance from '../../hooks/useBalance';
@@ -16,7 +17,7 @@ export default function Home() {
   const [transactions, setTransactions] = useListTransactions();
   const location = useLocation();
 
-  function performTransaction(valores) {
+  function performTransaction(valores: TransactionsProps) {
     const novobalance = calculateNewBalance(valores, balance);
     setBalance(novobalance);
     updateBalance(novobalance);

@@ -1,34 +1,36 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import Formulario from './index';
+import Form from './index';
 
 describe('Deve renderizar um campo de input', () => {
   test('no documento', () => {
-    render(<Formulario />);
-    const campoTexto = screen.getByPlaceholderText('Digite um valor');
-    expect(campoTexto).toBeInTheDocument();
+    const performTransactionMock = jest.fn();
+    render(<Form performTransaction={performTransactionMock} />);
+    const TextField = screen.getByPlaceholderText('Digite um valor');
+    expect(TextField).toBeInTheDocument();
   });
 
   test(' com o type number', () => {
-    render(<Formulario />);
-    const campoTexto = screen.getByPlaceholderText('Digite um valor');
-    expect(campoTexto).toHaveAttribute('type', 'number');
+    const performTransactionMock = jest.fn();
+    render(<Form performTransaction={performTransactionMock} />);
+    const TextField = screen.getByPlaceholderText('Digite um valor');
+    expect(TextField).toHaveAttribute('type', 'number');
   });
 
   test(' que pode ser preenchido', () => {
-    render(<Formulario />);
-    const campoTexto = screen.getByPlaceholderText('Digite um valor');
-    userEvent.type(campoTexto, '50');
-    expect(campoTexto).toHaveValue(50);
+    const performTransactionMock = jest.fn();
+    render(<Form performTransaction={performTransactionMock} />);
+    const TextField = screen.getByPlaceholderText('Digite um valor');
+    userEvent.type(TextField, '50');
+    expect(TextField).toHaveValue(50);
   });
 });
 
 test('Deve chamar um evento de onSubmit ao clicar em realizar transação', () => {
   const performTransaction = jest.fn();
+  render(<Form performTransaction={performTransaction} />);
+  const button = screen.getByRole('button');
 
-  render(<Formulario performTransaction={performTransaction} />);
-  const botao = screen.getByRole('button');
-
-  userEvent.click(botao);
+  userEvent.click(button);
   expect(performTransaction).toHaveBeenCalledTimes(1);
 });

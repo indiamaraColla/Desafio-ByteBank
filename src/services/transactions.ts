@@ -1,3 +1,4 @@
+import { TransactionsProps } from 'types/Interface/Transations';
 import api from './api';
 
 export async function searchTransactions() {
@@ -9,9 +10,9 @@ export async function searchTransactions() {
   }
 }
 
-export async function saveTransaction(novaTransacao: string) {
+export async function saveTransaction(payload: TransactionsProps) {
   try {
-    const resp = await api.post('/transacoes', novaTransacao);
+    const resp = await api.post('/transacoes', payload);
     return resp.status;
   } catch (err) {
     return 'Erro na requisição';

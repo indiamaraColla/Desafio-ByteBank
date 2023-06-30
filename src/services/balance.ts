@@ -9,9 +9,9 @@ export async function searchBalance() {
   }
 }
 
-export async function updateBalance(novoSaldo: string) {
+export async function updateBalance(payload: number) {
   api
-    .put('/saldo', { valor: novoSaldo })
+    .put('/saldo', { valor: payload })
     .then((resp) => console.log(resp.status))
     .catch((err) => console.log(err));
 }

@@ -1,19 +1,11 @@
-interface TransactionsProps {
-  item: {
-    mes: string;
-    transacao: string;
-    data: string;
-    valor: string;
-  };
-  styles: {
-    mes: string;
-    transacao: string;
-    valor: string;
-    divisor: string;
-  };
+import { TransactionsProps } from 'types/Interface/Transations';
+import styles from '../Extract.module.css';
+
+interface ResultProps {
+  item: TransactionsProps;
 }
 
-export default function Transactions({ item, styles }: TransactionsProps) {
+export default function Transactions({ item }: ResultProps) {
   return (
     <li>
       <p className={styles.mes}>{item.mes}</p>

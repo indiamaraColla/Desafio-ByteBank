@@ -5,14 +5,14 @@ type Transaction = {
   data: string;
   mes: string;
   transacao: string;
-  valor: number;
+  valor: string;
 };
 
-type SetTransactions = React.Dispatch<React.SetStateAction<never[]>>;
+type SetTransactions = React.Dispatch<React.SetStateAction<Transaction[]>>;
 type UseListTransactionsResult = [Transaction[], SetTransactions];
 
 export default function useListTransactions(): UseListTransactionsResult {
-  const [transactions, setTransactions] = useState([]);
+  const [transactions, setTransactions] = useState<Transaction[]>([]);
 
   async function listTransactions() {
     const transactions = await searchTransactions();

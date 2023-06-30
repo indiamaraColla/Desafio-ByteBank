@@ -4,20 +4,20 @@ import Menu from './index';
 
 test('Deve renderizar o link para a página inicial', () => {
   render(<Menu path="/" />, { wrapper: BrowserRouter });
-  const linkPaginaInicial = screen.getByText('Início');
-  expect(linkPaginaInicial).toBeInTheDocument();
+  const linkPageHome = screen.getByText('Início');
+  expect(linkPageHome).toBeInTheDocument();
 });
 
 test('Deve renderizar uma lista com quatro links', () => {
   render(<Menu path="/" />, { wrapper: BrowserRouter });
-  const linksPaginaInicial = screen.getAllByRole('link');
-  expect(linksPaginaInicial).toHaveLength(4);
+  const linkPageHome = screen.getAllByRole('link');
+  expect(linkPageHome).toHaveLength(4);
 });
 
 test('Não deve renderizar o link de Extrato', () => {
   render(<Menu path="/" />, { wrapper: BrowserRouter });
-  const linkExtrato = screen.queryByText('Extrato');
-  expect(linkExtrato).not.toBeInTheDocument();
+  const linkExtract = screen.queryByText('Extrato');
+  expect(linkExtract).not.toBeInTheDocument();
 });
 
 test('Deve renderizar os links com a classe link', () => {

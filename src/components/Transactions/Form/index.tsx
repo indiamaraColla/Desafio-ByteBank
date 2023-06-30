@@ -1,8 +1,9 @@
 import { useState } from 'react';
+import { TransactionsProps } from 'types/Interface/Transations';
 import styles from './Form.module.css';
 
 interface FormProps {
-  performTransaction: (transaction: { data: string; mes: string }) => void;
+  performTransaction: (transaction: TransactionsProps) => void;
 }
 
 export default function Form({ performTransaction }: FormProps) {

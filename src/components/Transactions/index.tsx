@@ -1,14 +1,15 @@
+import { TransactionsProps } from 'types/Interface/Transations';
 import Form from './Form';
 import styles from './Transactions.module.css';
 import { ReactComponent as Ilustracao } from './ilustracao.svg';
 
-interface TransactionsProps {
-  performTransaction: () => void;
+interface performTransactionProps {
+  performTransaction: (valores: TransactionsProps) => void;
 }
 
 export default function Transactions({
   performTransaction,
-}: TransactionsProps) {
+}: performTransactionProps) {
   return (
     <section className="container">
       <div className="detalhe__superior" />
