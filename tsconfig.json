@@ -8,14 +8,9 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "baseUrl": "./src",
-    "paths": {
-      "~components/*": ["./components/*"],
-      "~pages/*": ["./pages/*"],
-      "~hooks/*": ["./hooks/*"],
-      "~utils/*": ["./utils/*"]
-    },
     "typeRoots": ["./node_modules/@types"],
-    "allowJs": true
+    "allowJs": true,
+    "noEmit": true
   },
   "include": [
     "src",
