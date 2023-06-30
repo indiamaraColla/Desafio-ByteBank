@@ -18,8 +18,7 @@
     "src/**/*.tsx",
     "src/**/*.js",
     "src/**/*.jsx",
-    "src/**/*.test.js",
-    "src/types/custom.d.ts"
+    "src/**/*.test.js"
   ],
   "exclude": ["node_modules", "build", "scripts"]
 }
