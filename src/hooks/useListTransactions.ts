@@ -9,15 +9,15 @@ type Transaction = {
 };
 
 type SetTransactions = React.Dispatch<React.SetStateAction<Transaction[]>>;
-type UseListTransactionsResult = [Transaction[], SetTransactions];
+export type UseListTransactionsResult = [Transaction[], SetTransactions];
 
 export default function useListTransactions(): UseListTransactionsResult {
   const [transactions, setTransactions] = useState<Transaction[]>([]);
 
-  async function listTransactions() {
+  const listTransactions = async () => {
     const transactions = await searchTransactions();
     setTransactions(transactions);
-  }
+  };
 
   useEffect(() => {
     listTransactions();

@@ -1,22 +1,11 @@
 import Balance from './Balance';
 import styles from './CardBalance.module.css';
+import { daysOfTheWeek, today } from './config';
 import { ReactComponent as Ilustracao } from './ilustracao.svg';
 
 interface CardBalanceProps {
   balance: number;
 }
-
-const dateNow = Date.now();
-const today = new Date(dateNow);
-const daysOfTheWeek = [
-  'Domingo',
-  'Segunda-feira',
-  'Terça-feira',
-  'Quarta-feira',
-  'Quinta-feira',
-  'Sexta-feira',
-  'Sábado',
-];
 
 export default function CardBalance({ balance }: CardBalanceProps) {
   return (

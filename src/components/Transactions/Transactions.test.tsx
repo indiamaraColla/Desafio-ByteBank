@@ -1,8 +1,21 @@
 import { fireEvent, render } from '@testing-library/react';
+import { format, isSameMonth } from 'date-fns';
+import MockDate from 'mockdate';
 import Transactions from './index';
+
 describe('Transactions', () => {
+  beforeEach(() => {
+    MockDate.set('2023-06-30');
+  });
+
+  afterEach(() => {
+    MockDate.reset();
+  });
+
   it('should perform transaction when form is submitted', () => {
     const performTransactionMock = jest.fn();
+    const currentDate = new Date();
+    const expectedDate = new Date('2023-06-30');
 
     const { getByTestId, getByText } = render(
       <Transactions performTransaction={performTransactionMock} />
@@ -15,8 +28,8 @@ describe('Transactions', () => {
     fireEvent.click(labelButton);
 
     expect(performTransactionMock).toHaveBeenCalledWith({
-      data: '30/06/2023',
-      mes: 'Junho',
+      data: format(expectedDate, 'dd/MM/yyyy'),
+      mes: isSameMonth(expectedDate, currentDate) ? 'Junho' : '',
       transacao: '',
       valor: '100',
     });

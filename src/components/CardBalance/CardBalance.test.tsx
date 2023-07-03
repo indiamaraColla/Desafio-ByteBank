@@ -1,4 +1,6 @@
 import { render } from '@testing-library/react';
+
+import { daysOfTheWeek, today } from './config';
 import CardBalance from './index';
 describe('CardBalance', () => {
   it('should display correct balance', () => {
@@ -13,9 +15,11 @@ describe('CardBalance', () => {
   it('should display correct current date', () => {
     const amount = 80;
     const { getByTestId } = render(<CardBalance balance={amount} />);
-
     const currentDateElement = getByTestId('data-atual');
-    const expectedDateText = 'Sexta-feira, 30/06/2023';
+    const expectedDateText = `${
+      daysOfTheWeek[today.getDay()]
+    }, ${today.toLocaleDateString('pt-BR')}`;
+
     expect(currentDateElement.textContent).toBe(expectedDateText);
   });
 

@@ -8,10 +8,10 @@ type UseBalanceResult = [Balance, SetBalance];
 export default function useBalance(): UseBalanceResult {
   const [balance, setBalance] = useState<Balance>(0);
 
-  async function getBalance() {
+  const getBalance = async () => {
     const balanceValue = await searchBalance();
     setBalance(balanceValue);
-  }
+  };
 
   useEffect(() => {
     getBalance();
