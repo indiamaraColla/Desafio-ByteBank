@@ -28,7 +28,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className={styles.box}>
+      <main className={styles.container}>
         <Menu path={location.pathname} />
         <div className={styles.envelope}>
           <CardBalance balance={balance} />
@@ -38,6 +38,7 @@ export default function Home() {
           <Outlet />
           <noscript data-testid="local">{location.pathname}</noscript>
         </div>
+
         <Extract listTransations={transactions} />
       </main>
     </>

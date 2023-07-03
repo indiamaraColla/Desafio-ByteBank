@@ -30,3 +30,23 @@ img {
   height: 40px;
   width: 40px;
 }
+
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .user {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .user > p {
+    margin-right: 0;
+  }
+
+  .user > img {
+    display: none;
+  }
+}

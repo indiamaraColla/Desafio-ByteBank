@@ -9,7 +9,7 @@
 }
 
 .wrapper p {
-  margin: 0.25rem 0;
+  margin: 1rem 0;
   color: #2f2e41;
 }
 
@@ -17,11 +17,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 124px;
   width: 100%;
 }
 
-.card > img {
+.card > div > img {
   width: 267px;
   height: 134px;
 }
@@ -31,8 +30,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  width: 40%;
-  height: 100%;
+  margin-top: 32px;
 }
 
 .groupButton > span {
@@ -42,7 +40,7 @@
 .buttonConfig {
   width: 250px;
   height: 40px;
-  background: #47a138;
+  background: #91c688;
   border: none;
   border-radius: 8px;
   color: #fff;
@@ -50,7 +48,6 @@
   font-weight: 700;
   font-size: 1rem;
   line-height: 120%;
-  cursor: pointer;
   transition: 0.2 ease-in-out;
 }
 
@@ -58,17 +55,33 @@
   width: 250px;
   height: 40px;
   background: transparent;
-  border: 2px solid #bf1313;
+  border: 2px solid #c46464;
   border-radius: 8px;
-  color: #bf1313;
+  color: #c46464;
   font-family: 'Inter';
   font-weight: 700;
   font-size: 1rem;
   line-height: 120%;
-  cursor: pointer;
   transition: 0.2 ease-in-out;
+  margin: 10px 0;
 }
 
-.buttonConfig:hover {
-  background-color: #38812c;
+@media (max-width: 767px) {
+  .card {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 16px;
+  }
+
+  .card > img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 16px;
+  }
+
+  .groupButton {
+    width: 100%;
+    align-items: flex-start;
+  }
 }

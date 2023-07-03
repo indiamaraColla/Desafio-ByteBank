@@ -52,7 +52,7 @@ export default function Form({ performTransaction }: FormProps) {
           <option value="Transferência">Transferência</option>
         </select>
       </div>
-      <div className={styles.areaValor}>
+      <div className={styles.areaValue}>
         <label htmlFor="valor" className={styles.legend}>
           Valor
         </label>

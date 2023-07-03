@@ -39,3 +39,11 @@
   margin: 1rem 0;
   color: #f7f7f7;
 }
+
+@media (max-width: 1024px) {
+  .container {
+    margin: 16px 0;
+    height: auto;
+    width: 100%;
+  }
+}

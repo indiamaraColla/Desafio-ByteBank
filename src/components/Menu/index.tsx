@@ -26,9 +26,9 @@ export default function Menu({ path }: MenuProps) {
             >
               {item.link}
             </Link>
-            {indice !== listaMenu.length - 1 && (
+            {/* {indice !== listaMenu.length - 1 && (
               <div className={styles.divider} />
-            )}
+            )} */}
           </div>
         );
       })}

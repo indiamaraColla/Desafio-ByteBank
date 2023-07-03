@@ -4,7 +4,6 @@
 
 .menu {
   width: 180px;
-  height: 100%;
   border-radius: 8px;
   padding: 24px;
   background-color: #f7f7f7;
@@ -12,11 +11,12 @@
   list-style: none;
 }
 
-.divider {
-  width: 90%;
-  height: 1px;
-  background-color: #111111;
-  margin: 1rem auto;
+.menu > div {
+  padding: 24px;
+}
+
+.menu > div:not(:last-child) {
+  border-bottom: 1px solid #111111;
 }
 
 .link {
@@ -36,4 +36,24 @@
   font-weight: 600;
   cursor: pointer;
   text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 12px;
+    height: auto;
+  }
+
+  .menu > div {
+    padding: 12px;
+  }
+
+  .menu > div:not(:last-child) {
+    border-bottom: none;
+  }
 }

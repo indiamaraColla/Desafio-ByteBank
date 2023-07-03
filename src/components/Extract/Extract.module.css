@@ -60,3 +60,10 @@ ul {
   background-color: rgba(71, 161, 56, 0.5);
   margin: 0.8rem auto;
 }
+
+@media (max-width: 1024px) {
+  .container {
+    width: 90%;
+    margin: 1rem;
+  }
+}
