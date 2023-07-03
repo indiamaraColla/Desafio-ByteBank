@@ -42,7 +42,7 @@
   .menu {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
     flex-wrap: wrap;
     padding: 12px;
