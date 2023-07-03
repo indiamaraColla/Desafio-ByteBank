@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import Extract from './index';
 
-test('Deve renderizar uma lista de transações', () => {
+test('Should render a list of transactions', () => {
   const listTransations = [
     {
       transacao: 'Transferência',

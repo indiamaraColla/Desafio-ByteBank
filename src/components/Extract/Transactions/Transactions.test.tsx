@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import Transations from './index';
 
-test('Deve renderizar o mesmo componente com props atualizadas', () => {
+test('Should render the same component with updated props', () => {
   const listTransations = {
     transacao: 'Depósito',
     valor: '100',

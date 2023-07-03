@@ -26,7 +26,7 @@ describe('should render an input field', () => {
   });
 });
 
-test('Deve chamar um evento de onSubmit ao clicar em realizar transação', () => {
+test('should call an onSubmit event when clicking on perform transaction', () => {
   const performTransaction = jest.fn();
   render(<Form performTransaction={performTransaction} />);
   const button = screen.getByRole('button');
