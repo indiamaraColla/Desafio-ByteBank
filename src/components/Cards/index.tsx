@@ -5,21 +5,21 @@ import cartaoFisico from './fisico.svg';
 export default function Cards() {
   return (
     <section className="container">
-      <div className="detalhe__superior" />
+      <div className="top__detail" />
       <div className={styles.wrapper}>
         <h2>Meus cartões</h2>
         <p>Cartão físico</p>
-        <div className={styles.cartao}>
+        <div className={styles.card}>
           <img src={cartaoFisico} alt="Cartão físico" />
-          <div className={styles.funcoes}>
+          <div className={styles.groupButton}>
             <button
-              className={styles.botaoConfigurar}
+              className={styles.buttonConfig}
               data-testid="card-physical-config"
             >
               Configurar
             </button>
             <button
-              className={styles.botaoBloquear}
+              className={styles.buttonBlock}
               data-testid="card-physical-block"
             >
               Bloquear
@@ -28,17 +28,17 @@ export default function Cards() {
           </div>
         </div>
         <p>Cartão digital</p>
-        <div className={styles.cartao}>
+        <div className={styles.card}>
           <img src={cartaoDigital} alt="Cartão digital" />
           <div className={styles.funcoes}>
             <button
-              className={styles.botaoConfigurar}
+              className={styles.buttonConfig}
               data-testid="card-digital-config"
             >
               Configurar
             </button>
             <button
-              className={styles.botaoBloquear}
+              className={styles.buttonBlock}
               data-testid="card-digital-block"
             >
               Bloquear
@@ -47,7 +47,7 @@ export default function Cards() {
           </div>
         </div>
       </div>
-      <div className="detalhe__inferior" />
+      <div className="bottom__detail" />
     </section>
   );
 }

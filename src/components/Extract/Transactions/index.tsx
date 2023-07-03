@@ -8,23 +8,23 @@ interface ResultProps {
 export default function Transactions({ item }: ResultProps) {
   return (
     <li>
-      <p className={styles.mes}>{item.mes}</p>
-      <div className={styles.transacao}>
+      <p className={styles.month}>{item.mes}</p>
+      <div className={styles.transaction}>
         <p data-testid="tipoTransacao">{item.transacao}</p>
         <span>{item.data}</span>
       </div>
       {item.transacao === 'Transferência' ? (
         <h3
           data-testid="valorTransacao"
-          className={styles.valor}
+          className={styles.amount}
         >{`- R$ ${item.valor}`}</h3>
       ) : (
         <h3
           data-testid="valorTransacao"
-          className={styles.valor}
+          className={styles.amount}
         >{` R$ ${item.valor}`}</h3>
       )}
-      <div className={styles.divisor} />
+      <div className={styles.divider} />
     </li>
   );
 }

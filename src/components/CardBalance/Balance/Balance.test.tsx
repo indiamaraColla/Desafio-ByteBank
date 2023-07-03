@@ -5,7 +5,7 @@ describe('Componente <Saldo />', () => {
   test('Deve renderizar o saldo com valor monetário', () => {
     render(<Balance balance={1000} />);
 
-    const balance = screen.getByTestId('saldo');
+    const balance = screen.getByTestId('balance');
     expect(balance).toHaveTextContent('R$ 1000');
   });
 });

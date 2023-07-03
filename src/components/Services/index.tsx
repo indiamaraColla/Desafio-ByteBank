@@ -5,15 +5,15 @@ import icon from './icon.json';
 const Services = () => {
   return (
     <section className="container" data-testid="services">
-      <div className={styles.detalhe__superior} />
+      <div className={styles.top__detail} />
       <div className={styles.wrapper}>
         {icon.map((icone) => {
           return (
-            <Icon key={icone.servico} styles={styles.servicos} icon={icone} />
+            <Icon key={icone.servico} styles={styles.services} icon={icone} />
           );
         })}
       </div>
-      <div className={styles.detalhe__inferior} />
+      <div className={styles.bottom__detail} />
     </section>
   );
 };

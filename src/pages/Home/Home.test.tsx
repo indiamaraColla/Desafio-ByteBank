@@ -16,7 +16,7 @@ describe('Component <Home/>', () => {
     userEvent.type(textField, '100');
     userEvent.click(button);
 
-    const newTransaction = screen.getByTestId('lista-transacoes');
+    const newTransaction = screen.getByTestId('transaction-list');
     const itemExtract = screen.getByRole('listitem');
 
     expect(newTransaction).toContainElement(itemExtract);

@@ -12,7 +12,7 @@
   list-style: none;
 }
 
-.divisor {
+.divider {
   width: 90%;
   height: 1px;
   background-color: #111111;
@@ -31,7 +31,7 @@
   font-weight: 600;
 }
 
-.linkAtivo {
+.linkActive {
   color: #47a138;
   font-weight: 600;
   cursor: pointer;

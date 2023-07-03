@@ -12,9 +12,9 @@ export default function Balance({ balance }: BalanceProps) {
         <h2 className={styles.balance}>Saldo</h2>
         <Icon />
       </div>
-      <div className={styles.divisor} />
-      <p className={styles.conta}>Conta corrente</p>
-      <p data-testid="saldo" className={styles.valor}>{`R$ ${balance}`}</p>
+      <div className={styles.divider} />
+      <p className={styles.account}>Conta corrente</p>
+      <p data-testid="balance" className={styles.amount}>{`R$ ${balance}`}</p>
     </div>
   );
 }

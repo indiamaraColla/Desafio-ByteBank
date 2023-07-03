@@ -28,7 +28,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className={styles.caixa}>
+      <main className={styles.box}>
         <Menu path={location.pathname} />
         <div className={styles.envelope}>
           <CardBalance balance={balance} />

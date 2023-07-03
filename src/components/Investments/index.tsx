@@ -9,26 +9,22 @@ export default function Investments() {
 
   return (
     <section className="container" data-testid="investments">
-      <div className="detalhe__superior" />
+      <div className="top__detail" />
       <div className={styles.wrapper}>
-        <div className={styles.investimentos}>
+        <div className={styles.investments}>
           <h2>Investimentos</h2>
           <p>Total: R$ {investmentValue}</p>
         </div>
-        <div className={styles.aplicacoes}>
-          <Box renda="Renda Fixa" styles={styles.renda}>
-            R$ {fixedIncomeValue}
-          </Box>
-          <Box renda="Renda variável" styles={styles.renda}>
-            R$ {variableIcomeValue}
-          </Box>
+        <div className={styles.applications}>
+          <Box renda="Renda Fixa">R$ {fixedIncomeValue}</Box>
+          <Box renda="Renda variável">R$ {variableIcomeValue}</Box>
         </div>
         <h3>Estatísticas</h3>
-        <div className={styles.grafico}>
+        <div className={styles.graphic}>
           <img src={grafico} alt="Gráfico dos investimentos" />
         </div>
       </div>
-      <div className="detalhe__inferior" />
+      <div className="bottom__detail" />
     </section>
   );
 }

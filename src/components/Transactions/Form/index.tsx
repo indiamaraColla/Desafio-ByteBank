@@ -36,11 +36,11 @@ export default function Form({ performTransaction }: FormProps) {
   }
 
   return (
-    <form className={styles.formulario} onSubmit={handleSubmit}>
+    <form className={styles.form} onSubmit={handleSubmit}>
       <div>
-        <h3 className={styles.legenda__opcoes}>Nova Transação</h3>
+        <h3 className={styles.legend__options}>Nova Transação</h3>
         <select
-          className={styles.grupo__opcoes}
+          className={styles.group__options}
           onChange={handleChangeSelect}
           name="transacao"
           data-testid="select-opcoes"
@@ -53,12 +53,12 @@ export default function Form({ performTransaction }: FormProps) {
         </select>
       </div>
       <div className={styles.areaValor}>
-        <label htmlFor="valor" className={styles.legenda}>
+        <label htmlFor="valor" className={styles.legend}>
           Valor
         </label>
         <input
           onChange={handleChangeInput}
-          className={styles.campo__valor}
+          className={styles.field__value}
           type="number"
           value={formValues.valor}
           name="valor"
@@ -66,7 +66,7 @@ export default function Form({ performTransaction }: FormProps) {
           placeholder="Digite um valor"
           data-testid="form-input"
         />
-        <button className={styles.botao} type="submit">
+        <button className={styles.button} type="submit">
           Realizar transação
         </button>
       </div>

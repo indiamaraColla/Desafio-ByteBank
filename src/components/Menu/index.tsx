@@ -21,13 +21,13 @@ export default function Menu({ path }: MenuProps) {
             <Link
               to={item.href}
               className={`${styles.link} ${
-                path === item.href && styles.linkAtivo
+                path === item.href && styles.linkActive
               }`}
             >
               {item.link}
             </Link>
             {indice !== listaMenu.length - 1 && (
-              <div className={styles.divisor} />
+              <div className={styles.divider} />
             )}
           </div>
         );

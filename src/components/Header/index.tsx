@@ -4,10 +4,10 @@ import styles from './Header.module.css';
 
 const Header = () => {
   return (
-    <header className={styles.cabecalho}>
+    <header className={styles.header}>
       <div className={styles.container}>
         <Logo />
-        <div className={styles.usuario}>
+        <div className={styles.user}>
           <p>Joana Fonseca Gomes</p>
           <img src={avatarUsuario} alt="Ícone de um avatar de usuário" />
         </div>

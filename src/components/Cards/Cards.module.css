@@ -13,7 +13,7 @@
   color: #2f2e41;
 }
 
-.cartao {
+.card {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -21,12 +21,12 @@
   width: 100%;
 }
 
-.cartao > img {
+.card > img {
   width: 267px;
   height: 134px;
 }
 
-.funcoes {
+.groupButton {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,11 +35,11 @@
   height: 100%;
 }
 
-.funcoes > span {
+.groupButton > span {
   font-size: 0.9rem;
 }
 
-.botaoConfigurar {
+.buttonConfig {
   width: 250px;
   height: 40px;
   background: #47a138;
@@ -54,7 +54,7 @@
   transition: 0.2 ease-in-out;
 }
 
-.botaoBloquear {
+.buttonBlock {
   width: 250px;
   height: 40px;
   background: transparent;
@@ -69,6 +69,6 @@
   transition: 0.2 ease-in-out;
 }
 
-.botaoConfigurar:hover {
+.buttonConfig:hover {
   background-color: #38812c;
 }

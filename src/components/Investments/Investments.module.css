@@ -11,7 +11,7 @@
   font-size: 1rem;
 }
 
-.detalhe__superior {
+.top__detail {
   background-image: url(../../assets/detalhe-sup.svg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -23,7 +23,7 @@
   z-index: -1;
 }
 
-.detalhe__inferior {
+.bottom__detail {
   background-image: url(../../assets/detalhe-inf.svg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -34,7 +34,7 @@
   left: 0;
 }
 
-.grafico {
+.graphic {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,19 +47,19 @@
   border-radius: 8px;
 }
 
-.grafico > img {
+.graphic > img {
   width: 100%;
   height: 100%;
 }
 
-.aplicacoes {
+.applications {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
 
-.renda {
+.income {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -72,25 +72,25 @@
   text-align: center;
 }
 
-.renda > p {
+.income > p {
   color: #fff;
   margin: 0;
 }
 
-.renda > h3 {
+.income > h3 {
   color: #fff;
   margin: 0;
   font-size: 1rem;
 }
 
-.investimentos {
+.investments {
   height: 50px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.investimentos > p {
+.investments > p {
   color: #000;
   font-size: 0.9rem;
   font-weight: 400;

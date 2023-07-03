@@ -11,19 +11,19 @@
   background-color: #47a138;
 }
 
-.titulo {
+.title {
   font-weight: 500;
   color: #f7f7f7;
   font-size: 25px;
 }
 
-.data {
+.date {
   color: #f7f7f7;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
 }
 
-.ilustracao {
+.illustration {
   z-index: 1;
 }
 
@@ -35,7 +35,7 @@
   justify-content: space-between;
 }
 
-.detalhe__superior {
+.top__detail {
   background-image: url(../../assets/detalhe-sup-saldo.svg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -46,7 +46,7 @@
   right: 0;
 }
 
-.detalhe__inferior {
+.bottom__detail {
   background-image: url(../../assets/detalhe-inf-saldo.svg);
   background-repeat: no-repeat;
   background-size: cover;

@@ -12,12 +12,12 @@ export default function Transactions({
 }: performTransactionProps) {
   return (
     <section className="container">
-      <div className="detalhe__superior" />
+      <div className="top__detail" />
       <div className={styles.wrapper}>
         <Form performTransaction={performTransaction} />
       </div>
       <Ilustracao height="229" width="459" />
-      <div className="detalhe__inferior" />
+      <div className="bottom__detail" />
     </section>
   );
 }
