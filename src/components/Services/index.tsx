@@ -3,8 +3,13 @@ import Icon from './Icon/index';
 import styles from './Services.module.css';
 import icon from './icon.json';
 
+interface IconProps {
+  imagem: string;
+  servico: string;
+}
+
 const Services = () => {
-  const [hasService, setHasService] = useState(false);
+  const [hasService, setHasService] = useState<boolean>(false);
 
   const handleButton = () => {
     setHasService(true);
@@ -19,13 +24,9 @@ const Services = () => {
             Serviços indisponível no momento, tente novamente mais tarde...{' '}
           </h1>
         )}
-        {icon.map((icone) => {
+        {icon.map((item: IconProps) => {
           return (
-            <Icon
-              key={icone.servico}
-              icon={icone}
-              handleButton={handleButton}
-            />
+            <Icon key={item.servico} icon={item} handleButton={handleButton} />
           );
         })}
       </div>

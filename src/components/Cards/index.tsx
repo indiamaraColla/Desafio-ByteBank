@@ -2,7 +2,15 @@ import styles from './Cards.module.css';
 import cartaoDigital from './digital.svg';
 import cartaoFisico from './fisico.svg';
 
-const cardsData = [
+interface CardData {
+  type: string;
+  image: string;
+  function: string;
+  configTestId: string;
+  blockTestId: string;
+}
+
+const cardsData: CardData[] = [
   {
     type: 'físico',
     image: cartaoFisico,
