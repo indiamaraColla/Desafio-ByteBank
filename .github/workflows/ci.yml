@@ -17,14 +17,22 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Run Installation
-        run: npm rum install
+        run: npm install
       - name: Run Linter
-        run: npm rum lint
+        run: npm run lint
   preview:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Run Installation
-        run: npm rum install
+        run: npm install
       - name: Run Preview Deployment
-        run: npm rum deploy:preview
+        run: npm run deploy:preview
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run Installation
+        run: npm install
+      - name: Run Tests
+        run: npm test
