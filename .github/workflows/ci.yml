@@ -10,14 +10,14 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Run Installation
-        run: yarn install
+        run: npm rum install
       - name: Run Linter
-        run: yarn lint
+        run: npm rum lint
   preview:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Run Installation
-        run: yarn install
+        run: npm rum install
       - name: Run Preview Deployment
-        run: yarn deploy:preview
+        run: npm rum deploy:preview
