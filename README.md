@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# Projeto ByteBank
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto é uma adaptação do projeto ByteBank originalmente desenvolvido pela [Alura](https://github.com/alura-cursos/bytebank-v2/tree/aula01) em JavaScript. O objetivo do desafio foi realizar algumas melhorias no projeto, como a migração de JavaScript para TypeScript, implementação de testes adicionais e ajustes no layout responsivo.
+<br>
+<br>
 
-## Available Scripts
+## Desafio Proposto
 
-In the project directory, you can run:
+<br>
 
-### `npm start`
+- Migrar o projeto de JavaScript para TypeScript para melhorar a segurança e a manutenção do código. [aqui](https://github.com/indiamaraColla/Desafio-ByteBank/issues/2)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Implementar testes adicionais para aumentar a cobertura de testes do projeto. Você pode verificar as alterações realizadas [aqui](https://github.com/indiamaraColla/Desafio-ByteBank/issues/5)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Ajustar o layout de forma responsiva para evitar quebras e problemas de visualização em diferentes tamanhos de tela. Mais detalhes sobre as alterações podem ser encontrados [aqui](https://github.com/indiamaraColla/Desafio-ByteBank/issues/4)
 
-### `npm test`
+- Implementar integração contínua (CI) e entrega contínua (CD) no projeto para automatizar o processo de construção, testes e implantação.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Observação:** Não era objetivo desse desafio alterar ou modificar a estrutura HTML, CSS ou ajustar funcionalidades ou chamadas de api.
 
-### `npm run build`
+  <br>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Tecnologias utilizadas
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Se liga nessa lista de tudo que foi utilizado:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- `React`
+- `React Hooks`
+- `TypeScript`
+- `Jest - Testing Library`
+- `CI/CD`
 
-### `npm run eject`
+  <br>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Como executar o projeto
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone este repositório:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+git clone git@github.com:indiamaraColla/Desafio-ByteBank.git
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. Acesse o diretório do projeto:
 
-## Learn More
+```bash
+cd react-bytebank
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. Instale as dependências:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm install
+```
 
-### Code Splitting
+4. Execute o projeto:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm start
+```
 
-### Analyzing the Bundle Size
+5. O projeto estará disponível em [http://localhost:3000](http://localhost:3000).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<br>
 
-### Making a Progressive Web App
+## Contribuições
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Contribuições para o projeto são sempre bem-vindas. Se você encontrou algum problema ou tem sugestões de melhorias, fique à vontade para abrir uma [issue](https://github.com/indiamaraColla/Desafio-ByteBank/issues) ou enviar um [pull request](https://github.com/indiamaraColla/Desafio-ByteBank/pulls).
