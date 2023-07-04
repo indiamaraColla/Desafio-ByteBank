@@ -18,7 +18,10 @@
     "api": "json-server --watch db.json --port 8080",
     "format": "prettier --write \"src/**/*{.ts,.tsx}\"",
     "lint": "eslint . --ext .ts,.tsx",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy:prod": "npm run deploy:staging --prod",
+    "deploy:staging": "npm run build && vercel ./build --confirm --no-clipboard --token=$VERCEL_TOKEN",
+    "deploy:preview": "node ./scripts/pullRequestPreview"
   },
   "eslintConfig": {
     "extends": [
