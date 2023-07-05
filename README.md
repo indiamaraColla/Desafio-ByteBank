@@ -10,11 +10,11 @@ Este projeto é uma adaptação do projeto ByteBank originalmente desenvolvido p
 
 - Migrar o projeto de JavaScript para TypeScript para melhorar a segurança e a manutenção do código. [aqui](https://github.com/indiamaraColla/Desafio-ByteBank/issues/2)
 
-- Implementar testes adicionais para aumentar a cobertura de testes do projeto. Você pode verificar as alterações realizadas [aqui](https://github.com/indiamaraColla/Desafio-ByteBank/issues/5)
+- Implementar testes adicionais para aumentar a cobertura de testes do projeto. Você pode verificar as alterações realizadas. [aqui](https://github.com/indiamaraColla/Desafio-ByteBank/issues/5)
 
-- Ajustar o layout de forma responsiva para evitar quebras e problemas de visualização em diferentes tamanhos de tela. Mais detalhes sobre as alterações podem ser encontrados [aqui](https://github.com/indiamaraColla/Desafio-ByteBank/issues/4)
+- Ajustar o layout de forma responsiva para evitar quebras e problemas de visualização em diferentes tamanhos de tela. Mais detalhes sobre as alterações podem ser encontrados. [aqui](https://github.com/indiamaraColla/Desafio-ByteBank/issues/4)
 
-- Implementar integração contínua (CI) e entrega contínua (CD) no projeto para automatizar o processo de construção, testes e implantação.
+- Implementar integração contínua (CI) e entrega contínua (CD) no projeto para automatizar o processo de construção, testes e implantação.[aqui](https://github.com/indiamaraColla/Desafio-ByteBank/issues/6)
 
 **Observação:** Não era objetivo desse desafio alterar ou modificar a estrutura HTML, CSS ou ajustar funcionalidades ou chamadas de api.
 
